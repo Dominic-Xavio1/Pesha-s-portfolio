@@ -1,0 +1,74 @@
+/* Custom utility classes for theme-aware colors */
+
+/* Override hardcoded dark backgrounds to be theme-aware */
+.dark [class*="bg-[#121212]"],
+.dark [class*="bg-[#0a0a0a]"] {
+  background-color: var(--background);
+}
+
+.light [class*="bg-[#121212]"] {
+  background-color: #fafafa;
+}
+
+.light [class*="bg-[#0a0a0a]"] {
+  background-color: #ffffff;
+}
+
+/* Text color overrides */
+.light [class*="text-white/90"] {
+  color: rgba(10, 10, 10, 0.9);
+}
+
+.light [class*="text-white/80"] {
+  color: rgba(10, 10, 10, 0.8);
+}
+
+.light [class*="text-white/60"] {
+  color: rgba(10, 10, 10, 0.6);
+}
+
+.light [class*="text-white/40"] {
+  color: rgba(10, 10, 10, 0.4);
+}
+
+.light [class*="text-white/30"] {
+  color: rgba(10, 10, 10, 0.3);
+}
+
+.light [class*="text-white/20"] {
+  color: rgba(10, 10, 10, 0.2);
+}
+
+/* Border color overrides */
+.light [class*="border-white/10"] {
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+.light [class*="border-white/20"] {
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+.light [class*="border-white/5"] {
+  border-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Background gradient overrides for light mode */
+.light .bg-gradient-to-b.from-\[\#121212\] {
+  background-image: linear-gradient(to bottom, #fafafa, var(--tw-gradient-to));
+}
+
+.light .bg-gradient-to-b.from-\[\#0a0a0a\] {
+  background-image: linear-gradient(to bottom, #ffffff, var(--tw-gradient-to));
+}
+
+.light .bg-gradient-to-b.to-\[\#121212\] {
+  --tw-gradient-to: #fafafa;
+}
+
+.light .bg-gradient-to-b.to-\[\#0a0a0a\] {
+  --tw-gradient-to: #ffffff;
+}
+
+.light .bg-gradient-to-b.via-\[\#121212\] {
+  --tw-gradient-via: #fafafa;
+}
