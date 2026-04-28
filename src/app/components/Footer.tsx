@@ -46,7 +46,7 @@ export default function Footer() {
           className="flex flex-col md:flex-row justify-between items-center gap-6 pt-8 border-t border-white/5"
         >
           <div className="text-white/40 text-sm tracking-wide">
-            © 2026 Aria Nova. All rights reserved.
+            © 2026 Pesha Geofrey. All rights reserved.
           </div>
           <div className="flex gap-8 text-white/40 text-sm">
             <a href="#" className="hover:text-white transition-colors duration-300">

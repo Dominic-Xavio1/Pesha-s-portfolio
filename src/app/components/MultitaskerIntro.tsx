@@ -47,7 +47,7 @@ export default function MultitaskerIntro() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           {roles.map((role, index) => (
             <motion.div
               key={role.title}
@@ -61,20 +61,17 @@ export default function MultitaskerIntro() {
             >
               {/* Card Container */}
               <motion.div
-                className="relative h-[500px] rounded-3xl overflow-hidden border border-white/5"
+                className="relative h-[450px] rounded-xl overflow-hidden border border-white/5"
                 animate={{
                   scale: hoveredIndex === index ? 1.02 : 1,
                 }}
                 transition={{ duration: 0.5, ease: "easeOut" }}
               >
-                {/* Glassmorphism Background */}
                 <div
                   className={`absolute inset-0 bg-gradient-to-br ${role.color} backdrop-blur-xl`}
                 />
-
-                {/* Border Glow on Hover */}
                 <motion.div
-                  className="absolute inset-0 border-2 border-white/0 rounded-3xl"
+                  className="absolute inset-0 border-2 border-white/0 rounded-xl"
                   animate={{
                     borderColor:
                       hoveredIndex === index

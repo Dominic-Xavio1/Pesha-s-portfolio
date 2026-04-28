@@ -59,8 +59,7 @@ export default function HeroSection() {
         <div className="absolute inset-0">
           <video
             ref={videoRef}
-            className="w-full h-full object-cover dark:brightness-100"
-            // muted={isMuted}
+            className="w-full h-full object-cover dark:brightness-40"
             autoPlay
             playsInline
           >
@@ -69,7 +68,7 @@ export default function HeroSection() {
               type="video/mp4"
             />
           </video>
-          <div className="absolute inset-0 bg-gradient-to-b from-background/90 via-background/70 to-background/80" />
+          <div className="absolute inset-0 " />
         </div>
 
         {/* Welcome Content */}
@@ -92,8 +91,6 @@ export default function HeroSection() {
             </motion.p>
           </motion.div>
         </div>
-
-        {/* Controls */}
         {showVideo && (
           <div className="absolute bottom-8 right-8 flex gap-3">
             {/* Sound Toggle */}
@@ -114,7 +111,7 @@ export default function HeroSection() {
             </motion.button>
 
             {/* Skip Button */}
-            <motion.button
+            {/* <motion.button
               onClick={() => setShowVideo(false)}
               className="px-6 py-3 rounded-full backdrop-blur-xl bg-background/50 border border-foreground/10 hover:border-foreground/30 transition-colors duration-300"
               initial={{ opacity: 0 }}
@@ -124,7 +121,7 @@ export default function HeroSection() {
               whileTap={{ scale: 0.95 }}
             >
               <span className="text-foreground/60 text-sm tracking-wide">Skip</span>
-            </motion.button>
+            </motion.button> */}
           </div>
         )}
       </motion.div>
@@ -194,17 +191,17 @@ export default function HeroSection() {
       </div>
 
       {/* Artist Name - Bottom */}
-      <motion.div
+      {/* <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: showVideo ? 0 : 1 }}
         transition={{ duration: 1.5, delay: showVideo ? 0 : 1.2 }}
         className="absolute bottom-16 left-1/2 -translate-x-1/2 text-center"
       >
-        <h1 className="text-6xl tracking-tight text-foreground/90 mb-2">ARIA NOVA</h1>
+        <h1 className="text-6xl tracking-tight text-foreground/90 mb-2">PESHA GEOFREY</h1>
         <p className="text-foreground/40 tracking-[0.3em] text-xs uppercase">
           Singer · Producer · Pianist
         </p>
-      </motion.div>
+      </motion.div> */}
 
       {/* Scroll Indicator */}
       <motion.div

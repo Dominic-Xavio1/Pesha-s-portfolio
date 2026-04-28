@@ -83,9 +83,9 @@ export default function Soundscape() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="flex-shrink-0 w-[600px] snap-start group"
+              className="flex-shrink-0 w-[400px] snap-start group"
             >
-              <div className="relative h-[700px] rounded-3xl overflow-hidden">
+              <div className="relative h-[550px] rounded-xl overflow-hidden">
                 {/* Album Image */}
                 <ImageWithFallback
                   src={album.imageUrl}

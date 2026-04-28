@@ -15,18 +15,24 @@ export default function ContactSection() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-
-    setIsSubmitting(false);
-    setSubmitted(true);
-
-    // Reset form after 3 seconds
-    setTimeout(() => {
-      setSubmitted(false);
-      setFormData({ name: "", email: "", subject: "", message: "" });
-    }, 3000);
+ const formDatas = new FormData();
+    formDatas.append("name", formData.name);
+    formDatas.append("email", formData.email);
+    formDatas.append("subject", formData.subject);
+    formDatas.append("message", formData.message);
+    formDatas.append("access_key", "21421d62-bb72-4877-8951-636dfc04d3a3");
+       const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formDatas,
+    });
+    if(response.ok){
+      setIsSubmitting(false);
+    setSubmitted(true); 
+    } else {
+      console.error("Form submission failed");
+    }
+    
+    
   };
 
   const handleChange = (

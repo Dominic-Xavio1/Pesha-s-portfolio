@@ -73,7 +73,7 @@ export default function TheStudio() {
         </motion.div>
 
         {/* Swiss Style Grid Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 mb-32">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-12 mb-32">
           {studioImages.map((image, index) => (
             <motion.div
               key={image.label}
@@ -83,7 +83,7 @@ export default function TheStudio() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className={`${image.span} relative group overflow-hidden rounded-2xl`}
             >
-              <div className="relative h-full min-h-[300px]">
+              <div className="relative h-full min-h-[300px] ">
                 <ImageWithFallback
                   src={image.url}
                   alt={image.label}

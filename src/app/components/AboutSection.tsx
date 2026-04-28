@@ -179,7 +179,7 @@ export default function AboutSection() {
             "Music is the architecture of invisible cathedrals. I'm merely the architect translating silence into sanctuary."
           </blockquote>
           <p className="text-white/30 mt-4 tracking-[0.2em] text-sm">
-            — ARIA NOVA
+            — PESHA GEOFREY
           </p>
         </motion.div>
       </div>

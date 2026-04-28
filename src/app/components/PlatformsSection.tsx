@@ -30,15 +30,6 @@ const platforms = [
     followers: "2.3M Subscribers",
   },
   {
-    name: "SoundCloud",
-    icon: Radio,
-    description: "Unreleased Tracks & Demos",
-    link: "https://soundcloud.com",
-    color: "from-orange-500/20 to-orange-600/20",
-    accentColor: "text-orange-400",
-    followers: "567K Followers",
-  },
-  {
     name: "Bandcamp",
     icon: Disc,
     description: "Exclusive Releases & Merch",
@@ -103,7 +94,7 @@ export default function PlatformsSection() {
         </motion.div>
 
         {/* Platforms Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-16">
           {platforms.map((platform, index) => (
             <motion.a
               key={platform.name}
@@ -193,7 +184,7 @@ export default function PlatformsSection() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="mt-24"
         >
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
               { label: "Total Streams", value: "142M+" },
               { label: "Monthly Listeners", value: "8.5M" },
@@ -219,7 +210,7 @@ export default function PlatformsSection() {
                 </div>
               </motion.div>
             ))}
-          </div>
+          </div> */}
         </motion.div>
 
         {/* CTA */}
