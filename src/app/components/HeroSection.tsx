@@ -1,7 +1,7 @@
 import { motion } from "motion/react";
 import { useState, useEffect, useRef } from "react";
 import { Volume2, VolumeX } from "lucide-react";
-
+import wrath from "./video/wrath.mp4";
 export default function HeroSection() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isMuted, setIsMuted] = useState(true);
@@ -47,7 +47,7 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="relative h-screen w-full overflow-hidden bg-background flex items-center justify-center transition-colors duration-500">
+    <section className="relative h-screen w-full overflow-hidden bg-background flex items-center justify-center transition-colors duration-500 pt-20">
       {/* Welcome Video */}
       <motion.div
         className="absolute inset-0 z-20 flex items-center justify-center bg-background"
@@ -56,20 +56,20 @@ export default function HeroSection() {
         transition={{ duration: 1 }}
         style={{ pointerEvents: showVideo ? "auto" : "none" }}
       >
-        {/* Video Background with Overlay */}
         <div className="absolute inset-0">
           <video
             ref={videoRef}
-            className="w-full h-full object-cover opacity-60 dark:opacity-40"
-            muted={isMuted}
+            className="w-full h-full object-cover dark:brightness-100"
+            // muted={isMuted}
+            autoPlay
             playsInline
           >
             <source
-              src="https://assets.mixkit.co/videos/preview/mixkit-person-playing-piano-keys-close-up-32299-large.mp4"
+              src={wrath}
               type="video/mp4"
             />
           </video>
-          <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/90 via-background/70 to-background/80" />
         </div>
 
         {/* Welcome Content */}
@@ -79,8 +79,8 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.5 }}
           >
-            <h1 className="text-8xl md:text-9xl text-foreground mb-6 tracking-tight">
-              ARIA NOVA
+            <h1 className="text-5xl md:text-5xl text-foreground mb-6 tracking-tight">
+             Pesha Geofrey Producer!
             </h1>
             <motion.p
               initial={{ opacity: 0 }}
@@ -192,28 +192,6 @@ export default function HeroSection() {
           <div className="absolute -inset-20 bg-gradient-radial from-purple-500/10 via-transparent to-transparent blur-3xl" />
         </motion.div>
       </div>
-
-      {/* Integrated Navigation */}
-      <motion.nav
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: showVideo ? 0 : 1, y: 0 }}
-        transition={{ duration: 1, delay: showVideo ? 0 : 1 }}
-        className="absolute top-12 left-1/2 -translate-x-1/2 z-10"
-      >
-        <div className="flex gap-12 text-foreground/60 text-sm tracking-[0.15em] uppercase">
-          {["Works", "Process", "Contact"].map((item, i) => (
-            <motion.a
-              key={item}
-              href={`#${item.toLowerCase()}`}
-              className="hover:text-foreground transition-colors duration-500 cursor-pointer relative group"
-              whileHover={{ y: -2 }}
-            >
-              {item}
-              <span className="absolute -bottom-1 left-0 w-0 h-px bg-foreground/40 group-hover:w-full transition-all duration-500" />
-            </motion.a>
-          ))}
-        </div>
-      </motion.nav>
 
       {/* Artist Name - Bottom */}
       <motion.div
