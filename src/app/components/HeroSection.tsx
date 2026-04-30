@@ -107,19 +107,19 @@ export default function HeroSection() {
         </div>
 
         {/* Subtitle with Professional Role */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
           className="mb-8"
         >
-          <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full backdrop-blur-xl bg-white/5 border border-white/10">
+          <div className="inline-flex items-center gap-2 px-6 py-3 rounded-xl backdrop-blur-xl bg-white/5 border border-white/10">
             <Sparkles className="w-4 h-4 text-purple-400" />
             <span className="text-foreground/70 tracking-[0.15em] uppercase text-sm">
               {subtitle}
             </span>
           </div>
-        </motion.div>
+        </motion.div> */}
 
         {/* Description */}
         <motion.p
