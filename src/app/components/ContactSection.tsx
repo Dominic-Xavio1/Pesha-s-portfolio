@@ -20,14 +20,22 @@ export default function ContactSection() {
     formDatas.append("email", formData.email);
     formDatas.append("subject", formData.subject);
     formDatas.append("message", formData.message);
-    formDatas.append("access_key", "21421d62-bb72-4877-8951-636dfc04d3a3");
+    formDatas.append("access_key", "0c71ab55-7504-4d40-8c53-169e099f1faa");
        const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
       body: formDatas,
     });
     if(response.ok){
-      setIsSubmitting(false);
+      setIsSubmitting(false);setFormData({
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
+      });
     setSubmitted(true); 
+    setTimeout(() => {
+      setSubmitted(false);
+    }, 4000);
     } else {
       console.error("Form submission failed");
     }
@@ -235,9 +243,7 @@ export default function ContactSection() {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
-                <div className="relative px-8 py-5 rounded-2xl bg-gradient-to-r from-purple-500/20 to-blue-500/20 backdrop-blur-xl border border-white/20 overflow-hidden">
-                  {/* Animated Background */}
-                  <motion.div
+                <div className="relative px-8 py-5 rounded-2xl bg-gradient-to-r from-purple-500/20 to-blue-500/20 backdrop-blur-xl border border-white/20 overflow-hidden">                  <motion.div
                     className="absolute inset-0 bg-gradient-to-r from-purple-500/30 to-blue-500/30"
                     initial={{ x: "-100%" }}
                     animate={isSubmitting ? { x: ["0%", "100%"] } : {}}
