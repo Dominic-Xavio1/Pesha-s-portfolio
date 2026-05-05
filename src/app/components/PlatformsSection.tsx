@@ -5,47 +5,47 @@ const platforms = [
   {
     name: "Spotify",
     icon: Headphones,
-    description: "4.2M Monthly Listeners",
-    link: "https://spotify.com",
+    description: "More Listeners per day",
+    link: "https://open.spotify.com/user/31yodsrlgpe2ctclme2i4cjhficu?si=c0e53c8391c74a3e",
     color: "from-green-500/20 to-green-600/20",
     accentColor: "text-green-400",
-    followers: "842K Followers",
+    // followers: "842K Followers",
   },
   {
-    name: "Apple Music",
+    name: "LinkedIn",
     icon: Music,
     description: "Featured Artist",
     link: "https://music.apple.com",
     color: "from-pink-500/20 to-red-500/20",
     accentColor: "text-pink-400",
-    followers: "1.1M Followers",
+    // followers: "1.1M Followers",
   },
   {
     name: "YouTube",
     icon: Youtube,
     description: "Exclusive Content & Live Sessions",
-    link: "https://youtube.com",
+    link: "https://www.youtube.com/channel/UCQxTlce3AXrXUKmvt-jGdHw",
     color: "from-red-500/20 to-red-600/20",
     accentColor: "text-red-400",
-    followers: "2.3M Subscribers",
+    // followers: "2.3M Subscribers",
   },
   {
-    name: "Bandcamp",
+    name: "RouteNote",
     icon: Disc,
     description: "Exclusive Releases & Merch",
-    link: "https://bandcamp.com",
+    link: "https://www.routenote.com/rn/users/pesher",
     color: "from-cyan-500/20 to-blue-500/20",
     accentColor: "text-cyan-400",
-    followers: "Direct Support",
+    // followers: "Direct Support",
   },
   {
-    name: "Tidal",
+    name: "AudioMack",
     icon: Play,
     description: "Hi-Fi Audio Quality",
-    link: "https://tidal.com",
+    link: "https://audiomack.com/geofreypesha/song/680e34428150d",
     color: "from-blue-500/20 to-indigo-500/20",
     accentColor: "text-blue-400",
-    followers: "Master Quality",
+    // followers: "Master Quality",
   },
   {
     name: "AudioMack",
@@ -54,7 +54,7 @@ const platforms = [
     link: "https://audiomack.com",
     color: "from-yellow-500/20 to-amber-500/20",
     accentColor: "text-yellow-400",
-    followers: "423K Followers",
+    // followers: "423K Followers",
   },
 ];
 
@@ -148,9 +148,9 @@ export default function PlatformsSection() {
                   <div className="mt-auto">
                     <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full backdrop-blur-xl bg-white/5 border border-white/10">
                       <div className={`w-1.5 h-1.5 ${platform.accentColor} rounded-full opacity-60`} />
-                      <span className="text-white/60 text-xs tracking-wide">
+                      {/* <span className="text-white/60 text-xs tracking-wide">
                         {platform.followers}
-                      </span>
+                      </span> */}
                     </div>
                   </div>
 

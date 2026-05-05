@@ -1,52 +1,112 @@
 import { motion } from "motion/react";
 import { Play, Pause } from "lucide-react";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 
 const albums = [
   {
+    title: "Agenda by Bobson",
+    year: "2026",
+    type: "EP",
+    // imageUrl: "image7.jpg",
+    description: "Agenda is the song I produced and mastered.",
+    mediaUrl: "/videos/agenda.mp4",
+    mediaType: "video",
+    linkUrl: "https://youtu.be/38WMckJf2IM?si=k0InBat4N285PI-Z",
+    linkLabel: "Watch on YouTube",
+  },
+  {
+    title: "My Boo by Levy",
+    year: "2026",
+    type: "EP",
+    // imageUrl: "image7.jpg",
+    description: "A journey through ambient textures and vocal experimentation",
+    mediaUrl: "/videos/myboo.mp4",
+    mediaType: "video",
+    linkUrl: "https://youtu.be/SCOKyIBMPdE?si=KiAtnBUUkGNANu0L",
+    linkLabel: "Watch on YouTube",
+  },
+  {
+    title: "Fillet by Pesha ft Tito",
+    year: "2024",
+    type: "EP",
+    mediaUrl: "/videos/fillet.mp4",
+    mediaType: "video",
+     linkUrl: "https://youtu.be/PXKR58Bke6o?list=RDPXKR58Bke6o",
+    linkLabel: "Watch on YouTube",
+  },
+  
+  {
+    title: "Kwibuka by Demo",
+    year: "2024",
+    type: "EP",
+    mediaUrl: "/videos/video5.mp4",
+    mediaType: "video",
+     linkUrl: "https://youtu.be/PXKR58Bke6o?list=RDPXKR58Bke6o",
+    linkLabel: "Watch on YouTube",
+  },
+  {
+    title: "performing in the Village Time",
+    year: "2025",
+    type: "Album",
+    // imageUrl: "logo1.jpg",
+    // description: "Piano-driven narratives exploring shadow and light",
+    mediaUrl: "/videos/video2.mp4",
+    mediaType: "video",
+  },
+  {
+    title: "Village Time Performance",
+    year: "2025",
+    type: "Single",
+    mediaUrl: "/videos/video1.mp4",
+    mediaType: "video",
+  },
+   {
     title: "Ethereal Frequencies",
     year: "2026",
     type: "EP",
-    imageUrl: "https://images.unsplash.com/photo-1761144799388-eee92f0b5dcf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMG11c2ljaWFuJTIwc2luZ2VyJTIwcGVyZm9ybWFuY2V8ZW58MXx8fHwxNzc2ODQ5MzI1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    imageUrl: "logo1.jpg",
     description: "A journey through ambient textures and vocal experimentation",
-  },
-  {
-    title: "Nocturne Sessions",
-    year: "2025",
-    type: "Album",
-    imageUrl: "https://images.unsplash.com/photo-1563174558-ef3d732293e0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwyfHxncmFuZCUyMHBpYW5vJTIwY29uY2VydCUyMGhhbGwlMjBtaW5pbWFsaXN0fGVufDF8fHx8MTc3Njg0OTMyNHww&ixlib=rb-4.1.0&q=80&w=1080",
-    description: "Piano-driven narratives exploring shadow and light",
-  },
-  {
-    title: "Digital Reverie",
-    year: "2025",
-    type: "Single",
-    imageUrl: "https://images.unsplash.com/photo-1540908724956-3d5b8d9d6095?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwyfHxhYnN0cmFjdCUyMG11c2ljaWFuJTIwc2luZ2VyJTIwcGVyZm9ybWFuY2V8ZW58MXx8fHwxNzc2ODQ5MzI1fDA&ixlib=rb-4.1.0&q=80&w=1080",
-    description: "Electronic fusion with organic vocal layers",
-  },
-  {
-    title: "The Quiet Storm",
-    year: "2024",
-    type: "Album",
-    imageUrl: "https://images.unsplash.com/photo-1660883292873-6582b1ad9912?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwzfHxncmFuZCUyMHBpYW5vJTIwY29uY2VydCUyMGhhbGwlMjBtaW5pbWFsaXN0fGVufDF8fHx8MTc3Njg0OTMyNHww&ixlib=rb-4.1.0&q=80&w=1080",
-    description: "Intimate performances captured in raw emotion",
-  },
-  {
-    title: "Synthesis",
-    year: "2024",
-    type: "EP",
-    imageUrl: "https://images.unsplash.com/photo-1773687064765-84ddf838b605?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwzfHxhYnN0cmFjdCUyMG11c2ljaWFuJTIwc2luZ2VyJTIwcGVyZm9ybWFuY2V8ZW58MXx8fHwxNzc2ODQ5MzI1fDA&ixlib=rb-4.1.0&q=80&w=1080",
-    description: "Where classical meets contemporary production",
+    mediaUrl: "/videos/audio.mp3",
+    mediaType: "audio",
   },
 ];
 
 export default function Soundscape() {
   const [playingIndex, setPlayingIndex] = useState<number | null>(null);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const mediaRefs = useRef<(HTMLAudioElement | HTMLVideoElement | null)[]>([]);
+
+  useEffect(() => {
+    return () => {
+      // Cleanup: Stop all playing media on unmount
+      mediaRefs.current.forEach((media) => {
+        if (media) {
+          media.pause();
+          media.currentTime = 0;
+        }
+      });
+    };
+  }, []);
 
   const togglePlay = (index: number) => {
-    setPlayingIndex(playingIndex === index ? null : index);
+    const wasPlaying = playingIndex === index;
+
+    // Stop previously playing media
+    if (playingIndex !== null && mediaRefs.current[playingIndex]) {
+      mediaRefs.current[playingIndex]?.pause();
+      mediaRefs.current[playingIndex]!.currentTime = 0;
+    }
+
+    // Toggle current media
+    if (!wasPlaying && mediaRefs.current[index]) {
+      mediaRefs.current[index]?.play().catch((err) => {
+        console.error("Playback error:", err);
+      });
+      setPlayingIndex(index);
+    } else {
+      setPlayingIndex(null);
+    }
   };
 
   return (
@@ -86,20 +146,49 @@ export default function Soundscape() {
               className="flex-shrink-0 w-[400px] snap-start group"
             >
               <div className="relative h-[550px] rounded-xl overflow-hidden">
-                {/* Album Image */}
-                <ImageWithFallback
-                  src={album.imageUrl}
-                  alt={album.title}
-                  className="w-full h-full object-cover"
-                />
+                {/* Media Element - Video or Audio */}
+                {album.mediaType === "video" ? (
+                  <video
+                    ref={(el) => {
+                      mediaRefs.current[index] = el;
+                    }}
+                    className="absolute inset-0 w-full h-full object-cover z-0"
+                    poster={album.imageUrl}
+                    controls={false}
+                    onEnded={() => setPlayingIndex(null)}
+                  >
+                    <source src={album.mediaUrl} type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                ) : (
+                  <>
+                    <audio
+                      ref={(el) => {
+                        mediaRefs.current[index] = el;
+                      }}
+                      className="hidden"
+                      controls={false}
+                      onEnded={() => setPlayingIndex(null)}
+                    >
+                      <source src={album.mediaUrl} type="audio/mpeg" />
+                      Your browser does not support the audio tag.
+                    </audio>
+                    {/* Album Image for Audio Albums */}
+                    <ImageWithFallback
+                      src={album.imageUrl}
+                      alt={album.title}
+                      className="absolute inset-0 w-full h-full object-cover z-0"
+                    />
+                  </>
+                )}
 
                 {/* Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent z-[1]" />
 
                 {/* Play Button with Wave Animation */}
                 <motion.button
                   onClick={() => togglePlay(index)}
-                  className="absolute top-8 right-8 w-16 h-16 rounded-full backdrop-blur-xl bg-white/10 border border-white/20 flex items-center justify-center z-10"
+                  className="absolute top-8 right-8 w-16 h-16 rounded-full backdrop-blur-xl bg-white/10 border border-white/20 flex items-center justify-center z-20"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -112,7 +201,7 @@ export default function Soundscape() {
 
                 {/* Wave Animation when Playing */}
                 {playingIndex === index && (
-                  <div className="absolute top-8 right-8 w-16 h-16 pointer-events-none">
+                  <div className="absolute top-8 right-8 w-16 h-16 pointer-events-none z-20">
                     {[...Array(3)].map((_, i) => (
                       <motion.div
                         key={i}
@@ -134,28 +223,34 @@ export default function Soundscape() {
                 )}
 
                 {/* Content */}
-                <div className="absolute bottom-0 left-0 right-0 p-10">
+                <div className="absolute bottom-0 left-0 right-0 p-10 z-10">
                   <motion.div
                     initial={{ y: 20, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.2 }}
                   >
-                    <div className="flex items-center gap-4 mb-4">
-                      <span className="text-white/60 text-sm tracking-[0.2em] uppercase">
-                        {album.year}
-                      </span>
-                      <span className="w-1 h-1 bg-white/40 rounded-full" />
-                      <span className="text-white/60 text-sm tracking-[0.2em] uppercase">
-                        {album.type}
+                    <div className="flex items-center gap-4 ">
+                      <span className="text-white/60 text-md">
+                        {album.title}
                       </span>
                     </div>
-                    <h3 className="text-5xl text-white mb-4 tracking-tight">
-                      {album.title}
-                    </h3>
-                    <p className="text-white/60 text-lg max-w-md leading-relaxed">
-                      {album.description}
-                    </p>
+                    {album.linkUrl ? (
+                      <div className="mt-6">
+                        <a
+                          href={album.linkUrl}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/10 px-5 py-3 text-sm font-medium text-white transition hover:bg-white/20 hover:text-white/90"
+                        >
+                          {album.linkLabel ?? "View Project"}
+                        </a>
+                      </div>
+                    ) : (
+                      <p className="text-white/50 text-sm max-w-md leading-relaxed">
+                        {album.description}
+                      </p>
+                    )}
 
                     {/* Progress Bar */}
                     <motion.div
@@ -184,7 +279,7 @@ export default function Soundscape() {
 
                 {/* Glassmorphism Hover Effect */}
                 <motion.div
-                  className="absolute inset-0 backdrop-blur-sm bg-white/0 pointer-events-none"
+                  className="absolute inset-0 backdrop-blur-sm bg-white/0 pointer-events-none z-20"
                   initial={{ opacity: 0 }}
                   whileHover={{ opacity: 1 }}
                   transition={{ duration: 0.3 }}

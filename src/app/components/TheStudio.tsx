@@ -1,29 +1,28 @@
 import { motion } from "motion/react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
-
 const studioImages = [
   {
-    url: "https://images.unsplash.com/photo-1767570928868-6f7b41b94502?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtdXNpYyUyMHN0dWRpbyUyMG1peGluZyUyMGJvYXJkJTIwcHJvZmVzc2lvbmFsfGVufDF8fHx8MTc3Njg0OTMyNHww&ixlib=rb-4.1.0&q=80&w=1080",
-    label: "Mixing Console",
+    url: "image1.jpg",
+    label: "Piano Performance",
     span: "col-span-2 row-span-2",
   },
   {
-    url: "https://images.unsplash.com/photo-1775725904614-7f09658c9617?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwzfHxtdXNpYyUyMHN0dWRpbyUyMG1peGluZyUyMGJvYXJkJTIwcHJvZmVzc2lvbmFsfGVufDF8fHx8MTc3Njg0OTMyNHww&ixlib=rb-4.1.0&q=80&w=1080",
+    url: "image6.webp",
     label: "Production Setup",
     span: "col-span-1 row-span-1",
   },
   {
-    url: "https://images.unsplash.com/photo-1769755449144-32a12d5572c9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHw0fHxtdXNpYyUyMHN0dWRpbyUyMG1peGluZyUyMGJvYXJkJTIwcHJvZmVzc2lvbmFsfGVufDF8fHx8MTc3Njg0OTMyNHww&ixlib=rb-4.1.0&q=80&w=1080",
+    url: "image3.JPG",
     label: "Sound Engineering",
     span: "col-span-1 row-span-1",
   },
   {
-    url: "https://images.unsplash.com/photo-1563174558-dd09740f80b0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHw0fHxncmFuZCUyMHBpYW5vJTIwY29uY2VydCUyMGhhbGwlMjBtaW5pbWFsaXN0fGVufDF8fHx8MTc3Njg0OTMyNHww&ixlib=rb-4.1.0&q=80&w=1080",
-    label: "Piano Performance",
+    url: "image4.JPG",
+    label: "Mixing Console ",
     span: "col-span-1 row-span-2",
   },
   {
-    url: "https://images.unsplash.com/photo-1767570924190-7b62f034cd5b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwyfHxtdXNpYyUyMHN0dWRpbyUyMG1peGluZyUyMGJvYXJkJTIwcHJvZmVzc2lvbmFsfGVufDF8fHx8MTc3Njg0OTMyNHww&ixlib=rb-4.1.0&q=80&w=1080",
+    url: "image5.jpg",
     label: "Control Room",
     span: "col-span-1 row-span-1",
   },

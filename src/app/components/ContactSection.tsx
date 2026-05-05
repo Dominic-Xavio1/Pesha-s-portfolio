@@ -98,19 +98,19 @@ export default function ContactSection() {
                 {
                   icon: Mail,
                   label: "Email",
-                  value: "hello@arianova.com",
-                  href: "mailto:hello@arianova.com",
+                  value: "geofreypesha@gmail.com",
+                  href: "mailto:geofreypesha@gmail.com",
                 },
                 {
                   icon: Phone,
                   label: "Phone",
-                  value: "+1 (555) 123-4567",
-                  href: "tel:+15551234567",
+                  value: "+250792718310",
+                  href: "tel:+250792718310",
                 },
                 {
                   icon: MapPin,
                   label: "Location",
-                  value: "Los Angeles, CA",
+                  value: "RWAMAGANA, RWANDA",
                   href: null,
                 },
               ].map((contact, index) => (
@@ -180,7 +180,7 @@ export default function ContactSection() {
                     onChange={handleChange}
                     required
                     className="w-full px-6 py-4 rounded-2xl backdrop-blur-xl bg-white/5 border border-white/10 text-white placeholder-white/30 focus:border-white/30 focus:outline-none transition-colors duration-300"
-                    placeholder="John Doe"
+                    placeholder="Your name..."
                   />
                 </div>
 
@@ -196,7 +196,7 @@ export default function ContactSection() {
                     onChange={handleChange}
                     required
                     className="w-full px-6 py-4 rounded-2xl backdrop-blur-xl bg-white/5 border border-white/10 text-white placeholder-white/30 focus:border-white/30 focus:outline-none transition-colors duration-300"
-                    placeholder="john@example.com"
+                    placeholder="your.email@example.com"
                   />
                 </div>
               </div>
