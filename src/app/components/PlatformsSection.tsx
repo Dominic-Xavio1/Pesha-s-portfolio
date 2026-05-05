@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { Music, Headphones, Radio, Youtube, Mic2, Disc, Play } from "lucide-react";
+import { Music, Headphones, Radio, Youtube, Mic2, Disc, Play,Instagram,Linkedin } from "lucide-react";
 
 const platforms = [
   {
@@ -13,9 +13,9 @@ const platforms = [
   },
   {
     name: "LinkedIn",
-    icon: Music,
-    description: "Featured Artist",
-    link: "https://music.apple.com",
+    icon: Linkedin,
+    description: "My linkedIn profile",
+    link: "https://www.linkedin.com/in/pesha-geofrey-a07860369/",
     color: "from-pink-500/20 to-red-500/20",
     accentColor: "text-pink-400",
     // followers: "1.1M Followers",
@@ -31,7 +31,7 @@ const platforms = [
   },
   {
     name: "RouteNote",
-    icon: Disc,
+    icon: Mic2,
     description: "Exclusive Releases & Merch",
     link: "https://www.routenote.com/rn/users/pesher",
     color: "from-cyan-500/20 to-blue-500/20",
@@ -48,10 +48,10 @@ const platforms = [
     // followers: "Master Quality",
   },
   {
-    name: "AudioMack",
-    icon: Mic2,
+    name: "Instagram",
+    icon: Instagram,
     description: "Trending Artist",
-    link: "https://audiomack.com",
+    link: "https://www.instagram.com/pesha_geofrey/",
     color: "from-yellow-500/20 to-amber-500/20",
     accentColor: "text-yellow-400",
     // followers: "423K Followers",

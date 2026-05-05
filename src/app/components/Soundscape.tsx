@@ -35,15 +35,14 @@ const albums = [
      linkUrl: "https://youtu.be/PXKR58Bke6o?list=RDPXKR58Bke6o",
     linkLabel: "Watch on YouTube",
   },
-  
   {
     title: "Kwibuka by Demo",
     year: "2024",
     type: "EP",
     mediaUrl: "/videos/video5.mp4",
     mediaType: "video",
-     linkUrl: "https://youtu.be/PXKR58Bke6o?list=RDPXKR58Bke6o",
-    linkLabel: "Watch on YouTube",
+    //  linkUrl: "https://youtu.be/PXKR58Bke6o?list=RDPXKR58Bke6o",
+    // linkLabel: "Watch on YouTube",
   },
   {
     title: "performing in the Village Time",
@@ -62,12 +61,21 @@ const albums = [
     mediaType: "video",
   },
    {
-    title: "Ethereal Frequencies",
+    title: "Impore Rwanda by Pesha ft Demo, Daniel and Kevin",
     year: "2026",
     type: "EP",
-    imageUrl: "logo1.jpg",
-    description: "A journey through ambient textures and vocal experimentation",
+    imageUrl: "kwibuka.JPG",
+    // description: "A journey through ambient textures and vocal experimentation",
     mediaUrl: "/videos/audio.mp3",
+    mediaType: "audio",
+  },
+   {
+    title: "Umuvugo Mama by Joy",
+    year: "2026",
+    type: "EP",
+    imageUrl: "umuvugo.png",
+    description: "A poem of love and resilience, blending traditional melodies with modern production",
+    mediaUrl: "/video/umuvugo.mp3",
     mediaType: "audio",
   },
 ];
@@ -120,10 +128,10 @@ export default function Soundscape() {
           className="mb-20"
         >
           <h2 className="text-6xl text-white/90 mb-6 tracking-tight">
-            The Soundscape
+            The Projects I worked on.
           </h2>
           <p className="text-white/40 text-lg tracking-wide">
-            A curated collection of sonic explorations
+            Explore a collection of my latest work, spanning studio production and mastering to original vocal recordings and live performances
           </p>
         </motion.div>
 

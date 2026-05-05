@@ -31,23 +31,23 @@ const studioImages = [
 const processSteps = [
   {
     number: "01",
-    title: "Conceptualization",
-    description: "Every piece begins with an emotional blueprint. I explore sonic textures through improvisation and field recordings.",
+    title: "Grade level",
+    description: "Winning a first-place science award for building a stick bridge taught me how individual pieces harmonize for strength. This early engineering lesson now shapes my music production, as I blend separate sounds into one powerful, unified whole.",
   },
   {
     number: "02",
-    title: "Composition",
-    description: "Translating abstract ideas into structured musical language. Piano sketches evolve into layered arrangements.",
+    title: "School Level",
+    description: "Taking second place in the Live Band Intergrades competition proved the power of collective energy and tight-knit collaboration. It was a defining moment that solidified my love for the stage and the raw, human connection of a live performance.",
   },
   {
     number: "03",
-    title: "Production",
-    description: "Sculpting sound in the digital realm. Precision editing, spatial design, and harmonic experimentation converge.",
+    title: "Province Level",
+    description: "Winning first place in the provincial live band competition was a powerful validation of our teamwork and sound. It transformed my passion for performance into a standard of excellence I now bring to every stage and studio session.",
   },
   {
     number: "04",
-    title: "Performance",
-    description: "Bringing the studio creation to life. Each performance is a reinterpretation, never a mere reproduction.",
+    title: "Country level",
+    description: "Winning the national band competition was a defining moment that solidified my place in the country’s music scene. It stands as a testament to the dedication, leadership, and high-caliber performance I strive for in every project.",
   },
 ];
 
@@ -125,7 +125,7 @@ export default function TheStudio() {
           className="border-t border-white/10 pt-24"
         >
           <h3 className="text-4xl text-white/90 mb-16 tracking-tight">
-            Creative Process
+            Honors and Awards
           </h3>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">

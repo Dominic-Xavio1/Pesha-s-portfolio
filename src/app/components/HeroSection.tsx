@@ -1,9 +1,22 @@
 import { motion } from "motion/react";
-import { useState, useEffect } from "react";
+import { useState, useEffect,useRef } from "react";
 import { ArrowRight, Sparkles } from "lucide-react";
 
 export default function HeroSection() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [isPlaying, setIsPlaying] = useState(true);
+
+  const toggleVideo = () => {
+    if (videoRef.current) {
+      if (isPlaying) {
+        videoRef.current.pause();
+      } else {
+        videoRef.current.play();
+      }
+      setIsPlaying(!isPlaying);
+    }
+  };
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -17,13 +30,26 @@ export default function HeroSection() {
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, []);
 
-  const words = ["PESHA", "GEOFREY"];
+  const words = ["PESHA  GEOFREY"];
   const subtitle = "Singer · Producer · Pianist";
-  const description = "Crafting immersive sonic experiences through vocal artistry, production expertise, and classical innovation";
+  const description = "I am a pianist, music producer, and live performer creating music through performance, production, and creative collaboration. ";
 
 
   return (
-    <section className="relative min-h-screen w-full overflow-hidden bg-background flex items-center justify-center pt-20">
+    <section className="relative min-h-screen w-full overflow-hidden flex items-center justify-center pt-20">
+      {/* Video Background */}
+      <video
+      ref={videoRef}
+        className="absolute inset-0 h-full w-full object-cover object-center brightness-60"
+        src="/videos/background.mp4"
+        autoPlay
+        muted
+        loop
+        playsInline
+        // autoPlay
+      />
+      <div className="absolute inset-0 bg-slate-950/45" />
+
       {/* Animated Background Gradient Elements */}
       <div className="absolute inset-0 z-0">
         {/* Top-left gradient blob */}
@@ -201,6 +227,28 @@ export default function HeroSection() {
       >
         <div className="w-px h-16 bg-gradient-to-b from-foreground/40 to-transparent" />
       </motion.div>
+       <motion.button
+        onClick={toggleVideo}
+        className="absolute bottom-12 right-8 z-20 px-6 py-3 bg-white/10 hover:bg-white/20 text-white/90 rounded-full backdrop-blur-md border border-white/20 hover:border-white/40 transition-all duration-300 font-medium text-sm uppercase tracking-wider flex items-center gap-2"
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+      >
+        {isPlaying ? (
+          <>
+            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z" />
+            </svg>
+            Pause
+          </>
+        ) : (
+          <>
+            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5v14l11-7z" />
+            </svg>
+            Play
+          </>
+        )}
+      </motion.button>
     </section>
   );
 }

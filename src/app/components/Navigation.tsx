@@ -6,9 +6,9 @@ import { useTheme } from "../contexts/ThemeContext";
 const navItems = [
   { name: "Home", href: "#home" },
   { name: "About", href: "#about" },
-  { name: "Soundscape", href: "#soundscape" },
+  { name: "Projects", href: "#soundscape" },
   { name: "Platforms", href: "#platforms" },
-  { name: "Studio", href: "#studio" },
+  { name: "Gallery", href: "#studio" },
   { name: "Contact", href: "#contact" },
 ];
 
@@ -57,7 +57,7 @@ export default function Navigation() {
             className="text-foreground font-bold text-xl tracking-tight"
             whileHover={{ scale: 1.05 }}
           >
-            PESHA
+            PESHA GEOFREY
           </motion.div>
 
           {/* Navigation Links */}
@@ -84,8 +84,6 @@ export default function Navigation() {
               </motion.button>
             ))}
           </div>
-
-          {/* Theme Toggle */}
           <motion.button
             onClick={toggleTheme}
             className="w-10 h-10 rounded-full backdrop-blur-xl bg-background/50 border border-foreground/10 flex items-center justify-center hover:border-foreground/30 transition-colors duration-300"
