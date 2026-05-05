@@ -75,7 +75,7 @@ const albums = [
     type: "EP",
     imageUrl: "umuvugo.png",
     description: "A poem of love and resilience, blending traditional melodies with modern production",
-    mediaUrl: "/video/umuvugo.mp3",
+    mediaUrl: "/videos/umuvugo.mp3",
     mediaType: "audio",
   },
 ];
