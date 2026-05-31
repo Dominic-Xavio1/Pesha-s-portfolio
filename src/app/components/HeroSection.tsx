@@ -114,7 +114,7 @@ export default function HeroSection() {
             {words.map((word, wordIndex) => (
               <motion.h1
                 key={word}
-                className="text-7xl md:text-8xl font-bold tracking-tighter bg-gradient-to-r from-foreground via-foreground/90 to-foreground/70 bg-clip-text text-transparent"
+                className="text-7xl text-white md:text-8xl font-bold tracking-tighter bg-gradient-to-r from-foreground via-foreground/90 to-foreground/70 bg-clip-text text-transparent"
                 initial={{ opacity: 0, y: 60 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{
@@ -152,7 +152,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
-          className="max-w-2xl mx-auto text-foreground/60 text-lg leading-relaxed mb-12"
+          className="max-w-2xl mx-auto text-white/70 text-foreground/60 text-lg leading-relaxed mb-12"
         >
           {description}
         </motion.p>
@@ -178,10 +178,10 @@ export default function HeroSection() {
                 whileHover={{ x: "100%" }}
                 transition={{ duration: 0.5 }}
               />
-              <span className="relative text-foreground tracking-[0.1em] uppercase text-sm font-medium">
+              <span className="relative text-white tracking-[0.1em] uppercase text-sm font-medium">
                 Explore
               </span>
-              <ArrowRight className="relative w-4 h-4 text-foreground group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="relative w-4 h-4 text-white group-hover:translate-x-1 transition-transform" />
             </div>
           </motion.a>
 
@@ -193,7 +193,7 @@ export default function HeroSection() {
             whileTap={{ scale: 0.95 }}
           >
             <div className="relative px-8 py-4 rounded-full backdrop-blur-xl bg-white/5 border border-white/20 hover:border-white/40 transition-colors overflow-hidden flex items-center gap-3">
-              <span className="text-foreground/80 tracking-[0.1em] uppercase text-sm font-medium">
+              <span className="text-white tracking-[0.1em] uppercase text-sm font-medium">
                 Get in Touch
               </span>
             </div>

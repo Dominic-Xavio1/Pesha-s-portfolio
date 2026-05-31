@@ -4,6 +4,17 @@ import { useState, useRef, useEffect } from "react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 
 const albums = [
+    {
+    title: "Bounce by Levy",
+    year: "2026",
+    type: "Song",
+    // imageUrl: "image7.jpg",
+    description: "Bounce is a song I produced and mastered.",
+    mediaUrl: "/videos/bounce.mp4",
+    mediaType: "video",
+    linkUrl: "https://youtu.be/-knFj4LgTjw",
+    linkLabel: "Watch on YouTube",
+  },
   {
     title: "Agenda by Bobson",
     year: "2026",
@@ -239,7 +250,7 @@ export default function Soundscape() {
                     transition={{ delay: 0.2 }}
                   >
                     <div className="flex items-center gap-4 ">
-                      <span className="text-white/60 text-md">
+                      <span className="text-white text-md bg:text-white px-2 py-1 rounded-full">
                         {album.title}
                       </span>
                     </div>
@@ -249,13 +260,13 @@ export default function Soundscape() {
                           href={album.linkUrl}
                           target="_blank"
                           rel="noreferrer"
-                          className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/10 px-5 py-3 text-sm font-medium text-white transition hover:bg-white/20 hover:text-white/90"
+                          className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/10 px-5 py-3 text-sm font-medium text-white transition hover:bg-white/20 hover:text-white"
                         >
                           {album.linkLabel ?? "View Project"}
                         </a>
                       </div>
                     ) : (
-                      <p className="text-white/50 text-sm max-w-md leading-relaxed">
+                      <p className="text-white text-sm max-w-md leading-relaxed">
                         {album.description}
                       </p>
                     )}

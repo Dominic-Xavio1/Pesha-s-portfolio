@@ -18,7 +18,7 @@ const studioImages = [
   },
   {
     url: "image4.JPG",
-    label: "Mixing Console ",
+    label: "Live performance",
     span: "col-span-1 row-span-2",
   },
   {
@@ -26,6 +26,16 @@ const studioImages = [
     label: "Control Room",
     span: "col-span-1 row-span-1",
   },
+    {
+    url: "image15.jpg",
+    label: "Control Room",
+    span: "col-span-1 row-span-1",
+  },
+     {
+    url: "image16.jpg",
+    label: "Control Room",
+    span: "col-span-1 row-span-1",
+  }
 ];
 
 const processSteps = [
