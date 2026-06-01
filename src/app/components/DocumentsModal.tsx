@@ -17,12 +17,12 @@ const documents = [
     name: "Cover Letter",
     file: "Cover letter.pdf",
     description: "Cover letter "
+  },
+  {
+    name: "Letter of Recommendation",
+    file: "LETTER OF RECOMMENDATION (13).pdf",
+    description: "Professional recommendation"
   }
-  // {
-  //   name: "Letter of Recommendation",
-  //   file: "LETTER OF RECOMMENDATION (13).pdf",
-  //   description: "Professional recommendation"
-  // }
 ];
 
 export default function DocumentsModal({ isOpen, onClose }: DocumentsModalProps) {

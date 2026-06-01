@@ -4,17 +4,6 @@ import { useState, useRef, useEffect } from "react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 
 const albums = [
-    {
-    title: "Bounce by Levy",
-    year: "2026",
-    type: "Song",
-    // imageUrl: "image7.jpg",
-    description: "Bounce is a song I produced and mastered.",
-    mediaUrl: "/videos/bounce.mp4",
-    mediaType: "video",
-    linkUrl: "https://youtu.be/-knFj4LgTjw",
-    linkLabel: "Watch on YouTube",
-  },
   {
     title: "Agenda by Bobson",
     year: "2026",
@@ -46,14 +35,15 @@ const albums = [
      linkUrl: "https://youtu.be/PXKR58Bke6o?list=RDPXKR58Bke6o",
     linkLabel: "Watch on YouTube",
   },
+  
   {
     title: "Kwibuka by Demo",
     year: "2024",
     type: "EP",
     mediaUrl: "/videos/video5.mp4",
     mediaType: "video",
-    //  linkUrl: "https://youtu.be/PXKR58Bke6o?list=RDPXKR58Bke6o",
-    // linkLabel: "Watch on YouTube",
+     linkUrl: "https://youtu.be/PXKR58Bke6o?list=RDPXKR58Bke6o",
+    linkLabel: "Watch on YouTube",
   },
   {
     title: "performing in the Village Time",
@@ -72,21 +62,12 @@ const albums = [
     mediaType: "video",
   },
    {
-    title: "Impore Rwanda by Pesha ft Demo, Daniel and Kevin",
+    title: "Ethereal Frequencies",
     year: "2026",
     type: "EP",
-    imageUrl: "kwibuka.JPG",
-    // description: "A journey through ambient textures and vocal experimentation",
+    imageUrl: "logo1.jpg",
+    description: "A journey through ambient textures and vocal experimentation",
     mediaUrl: "/videos/audio.mp3",
-    mediaType: "audio",
-  },
-   {
-    title: "Umuvugo Mama by Joy",
-    year: "2026",
-    type: "EP",
-    imageUrl: "umuvugo.png",
-    description: "A poem of love and resilience, blending traditional melodies with modern production",
-    mediaUrl: "/videos/umuvugo.mp3",
     mediaType: "audio",
   },
 ];
@@ -139,10 +120,10 @@ export default function Soundscape() {
           className="mb-20"
         >
           <h2 className="text-6xl text-white/90 mb-6 tracking-tight">
-            The Projects I worked on.
+            The Soundscape
           </h2>
           <p className="text-white/40 text-lg tracking-wide">
-            Explore a collection of my latest work, spanning studio production and mastering to original vocal recordings and live performances
+            A curated collection of sonic explorations
           </p>
         </motion.div>
 
@@ -250,7 +231,7 @@ export default function Soundscape() {
                     transition={{ delay: 0.2 }}
                   >
                     <div className="flex items-center gap-4 ">
-                      <span className="text-white text-md bg:text-white px-2 py-1 rounded-full">
+                      <span className="text-white/60 text-md">
                         {album.title}
                       </span>
                     </div>
@@ -260,13 +241,13 @@ export default function Soundscape() {
                           href={album.linkUrl}
                           target="_blank"
                           rel="noreferrer"
-                          className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/10 px-5 py-3 text-sm font-medium text-white transition hover:bg-white/20 hover:text-white"
+                          className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/10 px-5 py-3 text-sm font-medium text-white transition hover:bg-white/20 hover:text-white/90"
                         >
                           {album.linkLabel ?? "View Project"}
                         </a>
                       </div>
                     ) : (
-                      <p className="text-white text-sm max-w-md leading-relaxed">
+                      <p className="text-white/50 text-sm max-w-md leading-relaxed">
                         {album.description}
                       </p>
                     )}
