@@ -99,4 +99,4 @@ For inquiries or support, please reach out through the portfolio contact section
 
 ---
 
-Made with ❤️ by Pesha
+Made with ❤️ by Dominique Savio!
