@@ -4,7 +4,7 @@ A clean, modern portfolio website for musicians built with a minimalist design p
 
 **Design Reference:** [Minimalist Musician Portfolio - Figma](https://www.figma.com/design/wzaRYKhxFk9lrzGP7Z8uNT/Minimalist-Musician-Portfolio)
 
-## 📋 Table of Contents
+## Table of Contents
 
 - [Features](#features)
 - [Prerequisites](#prerequisites)
