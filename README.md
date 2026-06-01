@@ -1,5 +1,5 @@
 # Minimalist Musician Portfolio
-
+Visit it Live [engineer](https://engineerpesha.vercel.app/)
 A clean, modern portfolio website for musicians built with a minimalist design philosophy. This project showcases musical work, biography, and contact information in an elegant, distraction-free interface.
 
 **Design Reference:** [Minimalist Musician Portfolio - Figma](https://www.figma.com/design/wzaRYKhxFk9lrzGP7Z8uNT/Minimalist-Musician-Portfolio)
@@ -88,6 +88,8 @@ Contributions are welcome! Here's how you can help:
 3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
+<img width="1365" height="683" alt="Screenshot 2026-06-01 1 50 47 PM" src="https://github.com/user-attachments/assets/0d72b2c0-b3ab-4dcf-b57c-f739fb0f1992" />
+<img width="1365" height="683" alt="Screenshot 2026-06-01 1 51 53 PM" src="https://github.com/user-attachments/assets/ab5ad8ab-d216-4131-b073-dade1e3247d1" />
 
 ## 📄 License
 
